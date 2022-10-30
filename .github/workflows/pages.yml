@@ -1,0 +1,54 @@
+name: Publish Pages
+
+on:
+  push:
+    branches: [ $default_branch ]
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+  pages: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version-file: '.python-version'
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v2
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
+      - name: Generate Site
+        run: mkdocs build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: site
+
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
