@@ -1,0 +1,18 @@
+site_name: MkDocs GitHub Pages demo
+site_description: This shows how to use GitHub Actions to build and publish GitHub Pages using MkDocs.
+site_author: Nikolas Grottendieck
+site_url: https://okeanos.github.io/mkdocs-gh-pages-demo/
+
+theme:
+  name: mkdocs
+  locale: en
+
+extra_css:
+  - css/tabs.css
+
+nav:
+  - 'index.md'
+  - 'subpage.md'
+
+markdown_extensions:
+  - pymdownx.tabbed
