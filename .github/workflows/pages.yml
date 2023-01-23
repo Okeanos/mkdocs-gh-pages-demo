@@ -32,7 +32,7 @@ jobs:
           python-version-file: '.python-version'
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v3
       - name: Install Dependencies
         run: pip install -r requirements.txt
       - name: Generate Site
