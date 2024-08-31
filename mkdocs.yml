@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://json.schemastore.org/mkdocs-1.6.json
 site_name: MkDocs GitHub Pages demo
 site_description: This shows how to use GitHub Actions to build and publish GitHub Pages using MkDocs.
 site_author: Nikolas Grottendieck

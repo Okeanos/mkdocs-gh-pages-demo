@@ -5,14 +5,14 @@ Something far more fearsome plagues the days, nights, and inbetweens.
 Wolpertingers.
 
 === "Tab 1"
-	Markdown **content**.
+  Markdown **content**.
 
-	Multiple paragraphs.
+  Multiple paragraphs.
 
 === "Tab 2"
-	More Markdown **content**.
+  More Markdown **content**.
 
-	- list item a
-	- list item b
+  - list item a
+  - list item b
 
 More text
