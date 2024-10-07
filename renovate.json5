@@ -4,5 +4,15 @@
 		// path as described in https://docs.renovatebot.com/config-presets/#preset-file-naming
 		// at this time the format is location>Owner/repo//filename.ext with // as repo-file separator
 		"github>Okeanos/renovate-config//default.json5"
+	],
+	"packageRules": [
+		// prevent updates to python because the versions are not available yet
+		// see https://github.com/actions/python-versions/releases
+		{
+			"matchPackageNames": [
+				"python"
+			],
+			"allowedVersions": "<3.13.0"
+		}
 	]
 }
