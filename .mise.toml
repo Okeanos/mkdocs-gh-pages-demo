@@ -10,7 +10,7 @@
 	gitleaks = "8.27.2"            # GitHub Actions sha256sum=141c3b2dede46d8b3a53b47116da756bd223decc0374797559a6b50ecba5590c
 	lychee = "0.18.1"
 	markdownlint-cli2 = "0.18.1"
-	python = "3.13.3"
+	python = "3.13.5"
 	shellcheck = "0.10.0"
 	shfmt = "3.11.0"
 	taplo = "0.10.0"               # GitHub Actions sha256sum=8fe196b894ccf9072f98d4e1013a180306e17d244830b03986ee5e8eabeb6156
